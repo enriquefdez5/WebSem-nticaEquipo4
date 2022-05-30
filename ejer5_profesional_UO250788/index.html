@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <title>Ejercicio 5 UO250788</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+
+    
+            <label for="searcher">Introduce tu búsqueda por Reporter: </label>
+            <input type="text" id="searcher" name="searcher"
+                    required="true" />
+            <button class="btn btn-success" onclick="searchTornados(document.getElementById('searcher').value)">Buscar</button>
+            
+            <br>
+            <br>
+            <label id="idLabel">Id Tornado:</label>
+            <br>
+            <label id="reporterLabel">Tornado Reporter:</label>
+            <br>
+            <label id="coordsLabel">Latitud, Longitud:</label>
+            <br>
+            <label id="dateLabel">Fecha:</label>
+            <br>
+            <br>
+            <button class="btn btn-success" id="btnLast" onclick="lastTornado()">Anterior</button>
+            <button class="btn btn-success" id="btnNext" onclick="nextTornado()">Siguiente</button>
+            <br>
+            <br>
+            <iframe 
+                id="iframecoords"
+                src="https://maps.google.com/maps?q=0,0&hl=es&z=14&amp&output=embed"
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </nav>
+</body>
+</html>
