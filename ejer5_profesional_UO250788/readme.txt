@@ -4,6 +4,10 @@ servidor mediante consultas Sparql.
 Se puede filtrar por el reporter de cada tornado (la persona
 que lo ha reportado). 
 
+Para que la página funcione correctamente es necesario que
+el endpoint esté activo y funcionando, si no se mostrarán
+errores de timeout por consola.
+
 Los datos obtenidos y mostrados por cada tornado son:
 ·Id del tornado
 ·El reporter
