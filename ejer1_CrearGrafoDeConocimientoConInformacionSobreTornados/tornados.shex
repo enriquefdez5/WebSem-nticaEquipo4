@@ -1,0 +1,66 @@
+prefix schema: <http://schema.org/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix : <http://example.org/>
+prefix stf:<http://sweetontology.net/stateStorm/>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix oum: <http://www.ontology-of-units-of-measure.org/resource/om-2/>
+prefix st: <http://sweetontology.net/phenAtmoPrecipitation/>
+
+<Tornado> IRI {
+:initDateTime xsd:dateTime ;
+:endDateTime xsd:dateTime ;
+:state {
+:rdf:type [schema:State] ;
+:state schema:address ;
+:county xsd:string ;
+} ;
+:maxWindSpeed {
+:rdf:type [:oum:Measure] ;
+:oum:hasNumericalValue  xsd:integer ;
+:oum:hasUnit oum:mile-StatutePerHour ;
+} ;
+:enhancedFujitaScale stf:F4 ;
+:deathsDirect xsd:integer ;
+:deathsIndirect xsd:integer ;
+:injuriesDirect xsd:integer ;
+:injuriesIndirect xsd:integer ;
+
+:reportSource {
+:rdf:type [:schema:Report] ;
+:reportNumber schema:reportNumber ;
+} ;
+
+:duration schema:Duration ;
+:beginLocation schema:beginLocation ;
+:endLocation schema:endLocation ;
+
+:init {
+:rdf:type [schema:GeoCoordinates ];
+            :latitude :schema:latitude;
+            :longitude :schema:longitude;
+} ;
+:end {
+:rdf:type [schema:GeoCoordinates ];
+            :latitude :schema:latitude;
+            :longitude :schema:longitude;
+} ;
+:width {
+:rdf:type [oum:Measure];
+            oum:hasNumericalValue :xsd:double;
+            oum:hasUnit :oum:yard-international;
+} ;
+:length {
+:rdf:type [oum:Measure];
+            oum:hasNumericalValue :xsd:double;
+            oum:hasUnit :oum:mile-Statute;
+} ;
+:type {
+:rdf:type [st:Tornado] ;
+} ;
+:magnitude {
+:rdf:type [oum:Measure];
+            oum:hasNumericalValue :xsd:double;
+            oum:hasUnit :oum:mile-Statute;
+} ;
+:propertyDamage xsd:integer;
+}

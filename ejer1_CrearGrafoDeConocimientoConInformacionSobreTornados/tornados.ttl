@@ -1,0 +1,224 @@
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix om: <http://opendata.caceres.es/def/ontomunicipio#> .
+@prefix out: <http://ontologies.hypios.com/out#> .
+@prefix ou: <http://opendata.unex.es/def/ontouniversidad#> .
+@prefix sx: <http://shex.io/ns/shex#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix ex: <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix st:<http://sweetontology.net/phenAtmoPrecipitation/> .
+@prefix stf:<http://sweetontology.net/stateStorm/> .
+@prefix location: <http://sw.deri.org/2006/07/location/loc#> .
+@prefix loc: <http://www.w3.org/2007/uwa/context/location.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix sc: <http://purl.org/science/owl/sciencecommons/> .
+@prefix fo: <http://purl.org/ontology/fo/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <http://example.org/> .
+@prefix db: <http://dbpedia.org/resource/classes#>  .
+@prefix oum: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+:tornados rdf:first :tornadoejer1;
+    :tornadoejer1 [ 
+    :initDateTime "2004-07-13T13:34:00"^^xsd:dateTime ;
+    :endDateTime "2004-07-13T13:54:00"^^xsd:dateTime ;
+    :state [rdf:type schema:State ;
+        :state "ILLINOIS"^^schema:address;
+        :county "WOODFORD"^^xsd:string ];
+    :enhancedFujitaScale stf:F4 ;
+    :maxWindSpeed [rdf:type oum:Measure;
+        oum:hasNumericalValue "120"^^xsd:integer;
+        oum:hasUnit oum:mile-StatutePerHour];
+    :deathsDirect "0"^^xsd:integer  ;
+    :deathsIndirect "0"^^xsd:integer ;
+    :injuriesDirect "3"^^xsd:integer ;
+    :injuriesIndirect "0"^^xsd:integer ;
+    :reportSource [rdf:type schema:Report ;
+    :reportNumber "NWS STORM SURVEY PDS"^^schema:reportNumber];
+    :duration "P0Y0M0DT0H20M0S"^^schema:Duration  ;
+    :beginLocation "2NE METAMORA"^^schema:beginLocation ;
+    :endLocation "2NE METAMORA"^^schema:endLocation ;
+    :init [ rdf:type schema:GeoCoordinates ;
+            :latitude "40.8"^^schema:latitude;
+            :longitude "-89.3"^^schema:longitude];
+    :end [ rdf:type schema:GeoCoordinates;
+            :latitude "40.78"^^schema:latitude;
+            :longitude "-89.16"^^schema:longitude];
+    :width [ rdf:type oum:Measure;
+            oum:hasNumericalValue "440"^^xsd:double; 
+            oum:hasUnit oum:yard-international];
+    :length [ rdf:type oum:Measure;
+            oum:hasNumericalValue "9.6"^^xsd:double;
+            oum:hasUnit oum:mile-Statute];
+    :events [ rdf:first :Event;
+            :initDateTime "2004-07-13T13:52:00"^^xsd:Datetime ;
+            :endDateTime "2004-07-13T13:52:00"^^xsd:Datetime ;
+            :state [rdf:type schema:State ;
+                :state "ILLINOIS"^^schema:address;
+                :county "MARSHALL"^^xsd:string ];
+            :type [rdf:type st:Hail] ;
+            :beginLocation "TOLUCA"^^schema:beginLocation ;
+            :endLocation "TOLUCA"^^schema:endLocation ;
+            :reportSource [rdf:type schema:Report ;
+            :reportNumber "EMERGENCY MANAGER"^^schema:reportNumber];
+            :deathsDirect "0"^^xsd:integer  ;
+            :deathsIndirect "0"^^xsd:integer  ;
+            :injuriesDirect "0"^^xsd:integer ;
+            :injuriesIndirect "0"^^xsd:integer ;
+            rdf:rest [
+                rdf:first :Event;
+                :initDateTime "2004-07-13T14:07:00"^^xsd:Datetime ;
+                :endDateTime "2004-07-13T14:35:00"^^xsd:Datetime ;
+                :state [rdf:type schema:State ;
+                :state "ILLINOIS"^^schema:address;
+                :county "CHAMPAIGN"^^xsd:string ];
+                :type [rdf:type st:ConvectiveStorm] ;
+                :beginLocation "LUDLOW"^^schema:beginLocation ;
+                :endLocation "LUDLOW"^^schema:endLocation ;
+                :reportSource [rdf:type schema:Report ;
+                :reportNumber "EMERGENCY MANAGER"^^schema:reportNumber];
+                :deathsDirect "0"^^xsd:integer  ;
+                :deathsIndirect "0"^^xsd:integer  ;
+                :injuriesDirect "0"^^xsd:integer ;
+                :injuriesIndirect "0"^^xsd:integer ; 
+                rdf:rest rdf:nil ;
+                ]
+            ] ;
+    rdf:rest [
+    rdf:first st:Tornado ;
+    :initDateTime "2010-05-10T15:34:00"^^xsd:dateTime ;
+    :endDateTime "2010-05-10T13:42:00"^^xsd:dateTime ;
+    :state [rdf:type schema:State ;
+    :state "KANSAS"^^schema:address;
+    :county "KINGMAN"^^xsd:string ];
+    :enhancedFujitaScale stf:F2 ;
+    :maxWindSpeed [rdf:type oum:Measure;
+        oum:hasNumericalValue "70"^^xsd:integer;
+        oum:hasUnit oum:mile-StatutePerHour];
+    :deathsDirect "0"^^xsd:integer  ;
+    :deathsIndirect "0"^^xsd:integer ;
+    :injuriesDirect "0"^^xsd:integer ;
+    :injuriesIndirect "0"^^xsd:integer ;
+    :reportSource [rdf:type schema:Report ;
+    :reportNumber "Trained Spotter"^^schema:reportNumber];
+    :duration "P0Y0M0DT0H6M0S"^^schema:Duration  ;
+    :location "6NE RAGO"^^schema:location ;
+    :beginLocation "6NE RAGO"^^schema:beginLocation ;
+    :endLocation "7NW NORWICH"^^schema:endLocation ;
+    :init [ rdf:type schema:GeoCoordinates ;
+        :latitude "37.49"^^schema:latitude;
+        :longitude "-97.98"^^schema:longitude];
+    :end [ rdf:type schema:GeoCoordinates;
+        :latitude "37.51"^^schema:latitude;
+        :longitude "-97.93"^^schema:longitude];
+    :width [ rdf:type oum:Measure;
+        oum:hasNumericalValue "700"^^xsd:double;
+        oum:hasUnit oum:yard-international];
+    :length [ rdf:type oum:Measure;
+        oum:hasNumericalValue "3.14"^^xsd:double;
+        oum:hasUnit oum:mile-Statute];
+    :events [rdf:first :Event ;
+        :initDateTime "2010-05-10T15:12:00"^^xsd:Datetime ;
+        :endDateTime "2010-05-10T15:15:00"^^xsd:Datetime ;
+        :state [rdf:type schema:State ;
+        :state "KANSAS"^^schema:address;
+        :county "KINGMAN"^^xsd:string ];
+        :type [rdf:type st:Tornado] ;
+        :beginLocation "5SW ZENDA"^^schema:beginLocation ;
+        :endLocation "3S ZENDA"^^schema:endLocation ;
+        :reportSource [rdf:type schema:Report ;
+        :reportNumber "Law Enforcement"^^schema:reportNumber];
+        :deathsDirect "0"^^xsd:integer  ;
+        :deathsIndirect "0"^^xsd:integer  ;
+        :injuriesDirect "0"^^xsd:integer ;
+        :injuriesIndirect "0"^^xsd:integer ;
+        rdf:rest [
+        rdf:first :Event;
+        :initDateTime "2010-05-10T15:20:00"^^xsd:Datetime ;
+        :endDateTime "2010-05-10T15:20:00"^^xsd:Datetime ;
+        :state [rdf:type schema:State ;
+        :state "KANSAS"^^schema:address;
+        :county "KINGMAN"^^xsd:string ];
+        :type [rdf:type st:Hail] ;
+        :beginLocation "2SE SPIVEY"^^schema:beginLocation ;
+        :endLocation "2SE SPIVEY"^^schema:endLocation ;
+        :reportSource [rdf:type schema:Report ;
+        :reportNumber "Trained Spotter"^^schema:reportNumber];
+        :deathsDirect "0"^^xsd:integer  ;
+        :deathsIndirect "0"^^xsd:integer  ;
+        :injuriesDirect "0"^^xsd:integer ;
+        :injuriesIndirect "0"^^xsd:integer ;
+        rdf:rest rdf:nil;
+        ]
+    ];
+        rdf:rest [
+        rdf:first st:Tornado ;
+        :initDateTime "2012-04-23T08:14:00"^^xsd:dateTime ;
+        :endDateTime "2012-04-23T09:58:30"^^xsd:dateTime ;
+        :state [rdf:type schema:State ;
+        :state "FLORIDA"^^schema:address;
+        :county "NASSAU"^^xsd:string ];
+        :enhancedFujitaScale stf:F2 ;
+        :maxWindSpeed [rdf:type oum:Measure;
+            oum:hasNumericalValue "65"^^xsd:integer;
+            oum:hasUnit oum:mile-StatutePerHour];
+        :deathsDirect "0"^^xsd:integer  ;
+        :deathsIndirect "0"^^xsd:integer  ;
+        :injuriesDirect "5"^^xsd:integer ;
+        :injuriesIndirect "0"^^xsd:integer ;
+        :reportSource [rdf:type schema:Report ;
+        :reportNumber "Trained Spotter"^^schema:reportNumber];
+        :duration "P0Y0M0DT1H44M30S"^^schema:Duration  ;
+        :location "2SE ESSEX"^^schema:location ;
+        :beginLocation "2SE ESSEX"^^schema:beginLocation ;
+        :endLocation "6SE BROAD"^^schema:endLocation ;
+        :init [ rdf:type schema:GeoCoordinates ;
+            :latitude "15.57"^^schema:latitude;
+            :longitude "94.14"^^schema:longitude];
+        :end [ rdf:type schema:GeoCoordinates;
+            :latitude "55.67"^^schema:latitude;
+            :longitude "-31.58"^^schema:longitude];
+        :width [ rdf:type oum:Measure;
+            oum:hasNumericalValue "550"^^xsd:double;
+            oum:hasUnit oum:yard-international];
+        :length [ rdf:type oum:Measure;
+            oum:hasNumericalValue "5.05"^^xsd:double;
+            oum:hasUnit oum:mile-Statute];
+        :events [rdf:first :Event ;
+            :initDateTime "2010-05-10T15:12:00"^^xsd:Datetime ;
+            :endDateTime "2010-05-10T15:15:00"^^xsd:Datetime ;
+            :state [rdf:type schema:State ;
+            :state "FLORIDA"^^schema:address;
+            :county "NASSAU"^^xsd:string ];
+            :type [rdf:type st:Tornado] ;
+            :beginLocation "8NW FULTON"^^schema:beginLocation ;
+            :endLocation "6NW FULTON"^^schema:endLocation ;
+            :reportSource [rdf:type schema:Report ;
+            :reportNumber "Law Enforcement"^^schema:reportNumber];
+            :deathsDirect "0"^^xsd:integer  ;
+            :deathsIndirect "0"^^xsd:integer  ;
+            :injuriesDirect "2"^^xsd:integer ;
+            :injuriesIndirect "0"^^xsd:integer ;
+            rdf:rest [
+                rdf:first :Event;
+                :initDateTime "2010-05-10T15:20:00"^^xsd:Datetime ;
+                :endDateTime "2010-05-10T15:20:00"^^xsd:Datetime ;
+                :state [rdf:type schema:State ;
+                :state "FLORIDA"^^schema:address;
+                :county "NASSAU"^^xsd:string ];
+                :type [rdf:type st:Hail] ;
+                :beginLocation "3N CANAL"^^schema:beginLocation ;
+                :endLocation "4NE CANAL"^^schema:endLocation ;
+                :reportSource [rdf:type schema:Report ;
+                :reportNumber "Trained Spotter"^^schema:reportNumber];
+                :deathsDirect "0"^^xsd:integer  ;
+                :deathsIndirect "0"^^xsd:integer  ;
+                :injuriesDirect "3"^^xsd:integer ;
+                :injuriesIndirect "3"^^xsd:integer ;
+                rdf:rest rdf:nil;
+                ]
+      ];
+            rdf:rest rdf:nil;
+            ]
+  ]
+].
